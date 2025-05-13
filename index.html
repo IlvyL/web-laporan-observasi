@@ -5,38 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laporan Observasi Alam - Mangrove Teluk Bangkok</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="css/script.js"></script>
 </head>
 <body>
     <header>
         <h1>Laporan Observasi Alam Yang Ada Di Indonesia</h1>
         <div class="info-box">
             <p><strong>Lokasi:</strong><a href="https://g.co/kgs/kDGmYJZ"> Mangrove Teluk Bangkok</a></p>
-            <p><strong>Anggota Kelompok:</strong>
-                <ol class="Anggota">
+            <p><strong>Anggota Kelompok:</strong></p>
+            <ol class="anggota">
                 <li>Abdul Azis Al Huda</li>
                 <li>Aldian Novia Adityawanto</li>
                 <li>Anugrah</li>
                 <li>Nesan</li>
             </ol>
-            </p>
         </div>
     </header>
-    <!-- Hamburger Icon -->
+    
+    <!-- Hamburger Menu -->
     <div class="hamburger" id="hamburger">
         <div class="hamburger-line"></div>
         <div class="hamburger-line"></div>
         <div class="hamburger-line"></div>
     </div>
     
-    <!-- Menu Navigasi -->
     <nav class="page-nav" id="pageNav">
         <button onclick="navigateTo('pendahuluan')">Bab 1 - Pendahuluan</button>
         <button onclick="navigateTo('pengamatan')">Bab 2 - Pengamatan</button>
         <button onclick="navigateTo('penutup')">Bab 3 - Penutup</button>
     </nav>
     
-    <!-- BAB 1 -->
+    <!-- Content Sections -->
     <section id="pendahuluan" class="content-section">
         <h2 class="bab-title">BAB 1: PENDAHULUAN</h2>
         
@@ -65,8 +63,7 @@
         </div>
     </section>
 
-    <!-- BAB 2 -->
-    <section id="pengamatan" class="content-section" style="display:none;">
+    <section id="pengamatan" class="content-section">
         <h2 class="bab-title">BAB 2: HASIL PENELITIAN</h2>
         
         <article id="hasil-observasi">
@@ -93,8 +90,7 @@
         </div>
     </section>
 
-    <!-- BAB 3 -->
-    <section id="penutup" class="content-section" style="display:none;">
+    <section id="penutup" class="content-section">
         <h2 class="bab-title">BAB 3: PENUTUP</h2>
         
         <article id="simpulan">
@@ -125,18 +121,6 @@
         <p>© 2023 Laporan Observasi Alam | Kelompok asik</p>
     </footer>
 
-    <script>
-        function navigateTo(sectionId) {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        window.onload = function() {
-            document.getElementById('pendahuluan').style.display = 'block';
-        };
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
