@@ -220,3 +220,55 @@ footer {
     margin-bottom: 5px;
     border-left: 5px solid #35424a;
 }
+
+  .hamburger {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            background: transparent;
+            border: none;
+        }
+        
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        
+        /* Style untuk menu navigasi */
+        .page-nav {
+            display: none;
+            flex-direction: column;
+            background: #f1f1f1;
+            padding: 10px;
+            width: 200px;
+        }
+        
+        .page-nav button {
+            margin: 5px 0;
+            padding: 8px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Efek saat menu aktif */
+        .active .hamburger-line:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .active .hamburger-line:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .active .page-nav {
+            display: flex;
+        }
+
