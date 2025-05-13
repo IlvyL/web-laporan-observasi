@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Observasi Alam - Mangrove Teluk Bangkok</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Laporan Observasi Alam Yang Ada Di Indonesia</h1>
+        <div class="info-box">
+            <p><strong>Lokasi:</strong><a href="https://g.co/kgs/kDGmYJZ"> Mangrove Teluk Bangkok</a></p>
+            <p><strong>Anggota Kelompok:</strong>
+                <ol class="Anggota">
+                <li>Abdul Azis Al Huda</li>
+                <li>Aldian Novia Adityawanto</li>
+                <li>Anugrah</li>
+                <li>Nesan</li>
+            </ol>
+            </p>
+        </div>
+    </header>
+
+    <nav class="page-nav">
+        <button onclick="navigateTo('pendahuluan')">Bab 1</button>
+        <button onclick="navigateTo('pengamatan')">Bab 2</button>
+        <button onclick="navigateTo('penutup')">Bab 3</button>
+    </nav>
+
+    <!-- BAB 1 -->
+    <section id="pendahuluan" class="content-section">
+        <h2 class="bab-title">BAB 1: PENDAHULUAN</h2>
+        
+        <article id="latarbelakang">
+            <h3>1. Latar Belakang</h3>
+            <p>[Penjelasan mengapa observasi ini dilakukan dan konteks penelitian]</p>
+        </article>
+        
+        <article id="tujuan">
+            <h3>2. Tujuan</h3>
+            <p>[Tujuan spesifik dari observasi ini]</p>
+        </article>
+        
+        <article id="pembahasan-masalah">
+            <h3>3. Pembahasan Masalah</h3>
+            <p>[Identifikasi masalah yang diamati]</p>
+        </article>
+        
+        <article id="metode">
+            <h3>4. Metode Pengumpulan Data</h3>
+            <p>[Cara data dikumpulkan: observasi, wawancara, dll.]</p>
+        </article>
+        
+        <div class="nav-buttons">
+            <button class="next-btn" onclick="navigateTo('pengamatan')">Bab 2 →</button>
+        </div>
+    </section>
+
+    <!-- BAB 2 -->
+    <section id="pengamatan" class="content-section" style="display:none;">
+        <h2 class="bab-title">BAB 2: HASIL PENELITIAN</h2>
+        
+        <article id="hasil-observasi">
+            <h3>1. Hasil Pengamatan</h3>
+            <p>[Data hasil observasi lapangan]</p>
+            <div class="gallery">
+                <img src="foto1.jpg" alt="Dokumentasi 1">
+                <img src="foto2.jpg" alt="Dokumentasi 2">
+            </div>
+        </article>
+        
+        <article id="hasil-wawancara">
+            <h3>2. Hasil Wawancara</h3>
+            <p>[Ringkasan wawancara dengan narasumber terkait]</p>
+            <blockquote>
+                "Kutipan hasil wawancara"
+                <footer>- Narasumber</footer>
+            </blockquote>
+        </article>
+        
+        <div class="nav-buttons">
+            <button class="prev-btn" onclick="navigateTo('pendahuluan')">← Bab 1</button>
+            <button class="next-btn" onclick="navigateTo('penutup')">Bab 3 →</button>
+        </div>
+    </section>
+
+    <!-- BAB 3 -->
+    <section id="penutup" class="content-section" style="display:none;">
+        <h2 class="bab-title">BAB 3: PENUTUP</h2>
+        
+        <article id="simpulan">
+            <h3>1. Simpulan</h3>
+            <p>[Ringkasan temuan utama]</p>
+        </article>
+        
+        <article id="saran">
+            <h3>2. Saran</h3>
+            <p>[Rekomendasi berdasarkan hasil observasi]</p>
+        </article>
+        
+        <article id="daftar-pustaka">
+            <h3>Daftar Pustaka</h3>
+            <ol>
+                <li>Nama Buku, Pengarang (Tahun)</li>
+                <li>Artikel Ilmiah, Penulis (Tahun)</li>
+                <li>Sumber Online, URL (Diakses pada Tanggal)</li>
+            </ol>
+        </article>
+        
+        <div class="nav-buttons">
+            <button class="prev-btn" onclick="navigateTo('pengamatan')">← Bab 2</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Laporan Observasi Alam | Kelompok [Nama Kelompok]</p>
+    </footer>
+
+    <script>
+        function navigateTo(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onload = function() {
+            document.getElementById('pendahuluan').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
